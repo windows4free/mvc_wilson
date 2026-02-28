@@ -8,6 +8,7 @@ class HomeController extends PublicController
 {
     public function run() :void
     {
+        ProductsDao::getProducts();
         $viewData = [];
         $viewData["productsOnSale"] = ProductsDao::getDailyDeals();
         $viewData["productsHighlighted"] = ProductsDao::getFeaturedProducts();

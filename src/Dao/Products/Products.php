@@ -1,6 +1,10 @@
 <?php
 namespace Dao\Products;
-class  Products {
+use Dao\Table;
+class  Products extends Table {
+   public static function getProducts() {
+    die(print_r(self::obtenerRegistros("SELECT * FROM products;",[])));
+   } 
     public static function getFeaturedProducts() {
       return [
           [
